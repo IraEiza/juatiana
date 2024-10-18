@@ -1,16 +1,15 @@
 <template>
-  <div class="p-10 h-screen bg-cover bg-center flex justify-center items-center">
-    <div class="p-4 bg-red-500 bg-opacity-60 rounded-xl shadow-md text-white text-center">
-      <div v-if="currentQuestion">
+  <div class="h-screen bg-cover bg-center flex justify-center items-center">
+    <div class="w-[1200px] h-[350px] px-4 py-8 bg-red-500 bg-opacity-60 rounded-xl shadow-md text-white text-center">
+      <div v-if="currentQuestion" class="h-full flex flex-col justify-between">
         <div class="text-4xl font-bold mb-6">{{ currentQuestion.question }}</div>
-
         <!-- Respuestas en formato 2x2 con estilo unificado -->
         <div class="grid grid-cols-2 gap-4">
           <button
             v-for="(answer, index) in currentQuestion.answers"
             :key="index"
             @click="selectAnswer(index)"
-            class="p-4 bg-pink-500 text-white font-bold rounded-md shadow-lg hover:bg-pink-400 hover:text-yellow-200 transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none cursor-pointer"
+            class="p-4 bg-white text-pink-500 font-bold rounded-md shadow-lg hover:bg-pink-100 hover:text-yellow-500 hover:shadow-pink-400 transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
           >
             {{ answer }}
           </button>

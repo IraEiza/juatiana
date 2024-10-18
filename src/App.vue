@@ -4,7 +4,7 @@
         <div class="font-bold text-6xl text-center text-white">M.I.R.A.M.O</div>
         <div class="text-xl">Método por IA de Reboot Academy para la detección de Matrimonios Óptimos</div>
         <div class="h-64 w-64 bg-[url('./public/AI_love.webp')] bg-contain my-12"></div>
-        <div class="text-lg p-4 bg-white font-bold rounded-md shadow-md shadow-lg hover:bg-pink-400 hover:text-yellow-200 hover:shadow-pink-400 transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none cursor-pointer" @click="startQuestions">Click para comenzar</div>
+        <div class="text-xl px-6 py-3 bg-white text-pink-500 font-bold rounded-full shadow-lg hover:bg-pink-100 hover:text-yellow-500 hover:shadow-pink-400 transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer" @click="startQuestions">Click para comenzar</div>
     </div>
     <div v-else-if="current_question < questions.length">
       <QuestionComponent
