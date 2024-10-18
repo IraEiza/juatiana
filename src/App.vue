@@ -1,9 +1,10 @@
 <template>
-  <div class="p-10 h-screen bg-red-400">
-    <div v-if="show_title" class="flex flex-col gap-4 items-center">
-      <div class="font-bold text-4xl text-center text-white">M.I.R.A.M.O</div>
-      <div>Método por IA de Reboot Academy para la detección de Matrimonios Óptimos</div>
-      <div class="p-4 bg-white rounded-md shadow-md" @click="startQuestions">Click para comenzar</div>
+  <div class="p-10 h-screen bg-[url('./public/downwards_heart_bg.gif')] bg-cover bg-center flex justify-center items-center">
+    <div v-if="show_title" class="flex flex-col gap-10 items-center bg-red-500 bg-opacity-80 p-20 rounded-xl">
+        <div class="font-bold text-6xl text-center text-white">M.I.R.A.M.O</div>
+        <div class="text-xl">Método por IA de Reboot Academy para la detección de Matrimonios Óptimos</div>
+        <div class="h-64 w-64 bg-[url('./public/AI_love.webp')] bg-contain my-12"></div>
+        <div class="text-lg p-4 bg-white rounded-md shadow-md" @click="startQuestions">Click para comenzar</div>
     </div>
     <div v-else-if="current_question < questions.length">
       <QuestionComponent
@@ -14,9 +15,8 @@
     </div>
     <div v-else>
       <transition name="fade">
-  <FinalScreen v-if="current_question >= questions.length" @restart="restartQuiz" />
-</transition>
-
+        <FinalScreen v-if="current_question >= questions.length" @restart="restartQuiz" />
+      </transition>
     </div>
   </div>
 </template>
